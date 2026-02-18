@@ -1,228 +1,522 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Frequency Live | Final Authority</title>
-<style>
-
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: white;
-    color: #0A3D91;
-}
-
-.header {
-    background: #0A3D91;
-    color: white;
-    padding: 20px 40px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-}
-
-.logo img {
-    height: 60px;
-    margin-right: 15px;
-}
-
-.logo-text {
-    font-size: 22px;
-    font-weight: bold;
-}
-
-.nav a {
-    color: white;
-    margin-left: 20px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.hero {
-    text-align: center;
-    padding: 80px 20px;
-    background: #EAF1FF;
-}
-
-.hero h1 {
-    font-size: 40px;
-}
-
-.hero p {
-    font-size: 20px;
-}
-
-.button {
-    display: inline-block;
-    background: #0A3D91;
-    color: white;
-    padding: 15px 30px;
-    margin-top: 20px;
-    text-decoration: none;
-    font-size: 18px;
-    border-radius: 5px;
-}
-
-.section {
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.book, .subscription {
-    margin: 20px;
-}
-
-.footer {
-    background: #0A3D91;
-    color: white;
-    padding: 40px 20px;
-    text-align: center;
-}
-
-.social a {
-    margin: 10px;
-    color: white;
-    text-decoration: none;
-}
-
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequency Nation | The Frequency Live — Final Authority</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #1a1a2e;
+            background: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .doctrine {
+            font-size: 0.9rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #e94560;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .slogan {
+            font-size: 1.5rem;
+            color: #a0a0a0;
+            margin-bottom: 30px;
+        }
+        
+        .hero-text {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 30px;
+            color: #d0d0d0;
+        }
+        
+        .cta-group {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary {
+            background: #e94560;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #c73e54;
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .btn-secondary:hover {
+            background: white;
+            color: #1a1a2e;
+        }
+        
+        /* Live Stream Section */
+        .live-section {
+            background: #16213e;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .live-badge {
+            display: inline-block;
+            background: #e94560;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        /* Rhythm Section */
+        .rhythm-section {
+            padding: 80px 0;
+            background: white;
+            text-align: center;
+        }
+        
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #1a1a2e;
+        }
+        
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 50px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .rhythm-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .rhythm-card {
+            background: #f8f9fa;
+            padding: 40px;
+            border-radius: 10px;
+            border-left: 4px solid #e94560;
+        }
+        
+        .time {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #e94560;
+            margin-bottom: 10px;
+        }
+        
+        .rhythm-title {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: #1a1a2e;
+        }
+        
+        /* Tiers Section */
+        .tiers-section {
+            padding: 80px 0;
+            background: #f8f9fa;
+            text-align: center;
+        }
+        
+        .tiers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .tier-card {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        
+        .tier-card.featured {
+            border: 3px solid #e94560;
+            transform: scale(1.05);
+        }
+        
+        .tier-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #1a1a2e;
+        }
+        
+        .tier-price {
+            font-size: 2.5rem;
+            color: #e94560;
+            margin-bottom: 20px;
+        }
+        
+        .tier-price span {
+            font-size: 1rem;
+            color: #666;
+        }
+        
+        .tier-desc {
+            color: #666;
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+        
+        .btn-tier {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #1a1a2e;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-tier:hover {
+            background: #e94560;
+        }
+        
+        /* Email Section */
+        .email-section {
+            padding: 80px 0;
+            background: #1a1a2e;
+            color: white;
+            text-align: center;
+        }
+        
+        .email-section h2 {
+            color: white;
+        }
+        
+        .email-section .section-subtitle {
+            color: #a0a0a0;
+        }
+        
+        /* Books Section */
+        .books-section {
+            padding: 80px 0;
+            background: white;
+            text-align: center;
+        }
+        
+        .books-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+        
+        .book-card {
+            background: #f8f9fa;
+            padding: 40px;
+            border-radius: 10px;
+        }
+        
+        .book-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: #1a1a2e;
+        }
+        
+        .book-desc {
+            color: #666;
+            margin-bottom: 25px;
+        }
+        
+        .book-price {
+            font-size: 1.5rem;
+            color: #e94560;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        /* Footer */
+        footer {
+            background: #0f0f1e;
+            color: #a0a0a0;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .doctrine-footer {
+            color: #e94560;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.8rem; }
+            .tier-card.featured { transform: none; }
+        }
+    </style>
 </head>
-
 <body>
 
-<div class="header">
+    <!-- Header / Hero -->
+    <header>
+        <div class="container">
+            <div class="doctrine">The Excellency of God</div>
+            <h1>Frequency Nation</h1>
+            <div class="slogan">Final Authority</div>
+            <p class="hero-text">
+                The global prayer movement establishing God's authority across nations. 
+                Join daily live intercession at 6AM, 2PM, and 10PM WAT. 
+                Stand as Watchman. Establish authority. Advance the Frequency.
+            </p>
+            <div class="cta-group">
+                <a href="https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-57B45923YX221973PNGGLSMI" class="btn btn-primary">
+                    Join the Watch — $19/month
+                </a>
+                <a href="#live" class="btn btn-secondary">
+                    Watch Live Prayer
+                </a>
+            </div>
+        </div>
+    </header>
 
-<div class="logo">
-<img src="Freq.PNG">
-<div class="logo-text">
-The Frequency Live<br>
-<span style="font-size:14px;">Final Authority</span>
-</div>
-</div>
+    <!-- Live Stream Section -->
+    <section class="live-section" id="live">
+        <div class="container">
+            <div class="live-badge">● LIVE BROADCAST</div>
+            <div class="video-container">
+                <iframe 
+                    src="https://www.youtube.com/embed/live_stream?channel=UCxxxxxxxxxxxxxxxxxxx" 
+                    frameborder="0" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <p style="color: #a0a0a0; margin-top: 20px;">
+                Next prayer watch: <span id="next-watch">Loading...</span>
+            </p>
+        </div>
+    </section>
 
-<div class="nav">
-<a href="https://the-frequency-live.kit.com/">Free Prayer Guide</a>
-<a href="https://www.youtube.com/@TheFrequencyLive">Live Broadcast</a>
-<a href="https://www.paypal.com/paypalme/FrequencyNation">Support</a>
-</div>
+    <!-- Rhythm Section -->
+    <section class="rhythm-section">
+        <div class="container">
+            <h2>The 6-2-10 Authority Rhythm</h2>
+            <p class="section-subtitle">
+                This is not a schedule. This is spiritual technology—unceasing intercession that keeps doors open where darkness held ground.
+            </p>
+            <div class="rhythm-grid">
+                <div class="rhythm-card">
+                    <div class="time">6AM</div>
+                    <div class="rhythm-title">Dawn Authority</div>
+                    <p>Establishing the day's dominion. Alignment and territorial claim.</p>
+                </div>
+                <div class="rhythm-card">
+                    <div class="time">2PM</div>
+                    <div class="rhythm-title">Midday Alignment</div>
+                    <p>Reinforcement and jurisdictional maintenance across nations.</p>
+                </div>
+                <div class="rhythm-card">
+                    <div class="time">10PM</div>
+                    <div class="rhythm-title">Night Watch</div>
+                    <p>Intercession, protection, and advancement while darkness seems deepest.</p>
+                </div>
+            </div>
+            <a href="https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-57B45923YX221973PNGGLSMI" class="btn btn-primary">
+                Stand as Watchman — $19/month
+            </a>
+        </div>
+    </section>
 
-</div>
+    <!-- Tiers Section -->
+    <section class="tiers-section">
+        <div class="container">
+            <h2>Stand in Frequency Nation</h2>
+            <p class="section-subtitle">
+                Choose your level of commitment. Every stand sustains the global burn.
+            </p>
+            <div class="tiers-grid">
+                <div class="tier-card">
+                    <div class="tier-name">Watchman</div>
+                    <div class="tier-price">$19<span>/month</span></div>
+                    <div class="tier-desc">
+                        Sustain the 6-2-10 burn. Full live access. Monthly impact reports. 
+                        Authority Prayer Manual included.
+                    </div>
+                    <a href="https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-57B45923YX221973PNGGLSMI" class="btn-tier">
+                        Join Watchman
+                    </a>
+                </div>
+                <div class="tier-card featured">
+                    <div class="tier-name">Ambassador</div>
+                    <div class="tier-price">$50<span>/month</span></div>
+                    <div class="tier-desc">
+                        Multiply the Frequency into your territory. Lighthouse launch kit. 
+                        Quarterly briefings. Mentor new citizens.
+                    </div>
+                    <a href="https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-5U022920RB021803SNGGLUAY" class="btn-tier">
+                        Become Ambassador
+                    </a>
+                </div>
+                <div class="tier-card">
+                    <div class="tier-name">Pillar</div>
+                    <div class="tier-price">$100<span>/month</span></div>
+                    <div class="tier-desc">
+                        Foundational support for global expansion. Exclusive strategy sessions. 
+                        Founding recognition in Frequency Nation.
+                    </div>
+                    <a href="https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-97441926N2003480MNGGLVLA" class="btn-tier">
+                        Stand as Pillar
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<div class="hero">
+    <!-- Email Capture Section -->
+    <section class="email-section">
+        <div class="container">
+            <h2>Receive Authority Prayers</h2>
+            <p class="section-subtitle">
+                Join 7 Days of Night Authority Prayers and global alignment updates from Frequency Nation.
+            </p>
+            <a href="https://the-frequency-live.kit.com/" class="btn btn-primary">
+                Join Frequency Nation
+            </a>
+        </div>
+    </section>
 
-<h1>The Global Prayer Platform</h1>
+    <!-- Books Section -->
+    <section class="books-section">
+        <div class="container">
+            <h2>Authority Resources</h2>
+            <p class="section-subtitle">
+                Deepen your stand with structured intercession frameworks.
+            </p>
+            <div class="books-grid">
+                <div class="book-card">
+                    <div class="book-title">Authority Prayer Manual</div>
+                    <div class="book-desc">
+                        The operational framework for spiritual dominion. 
+                        Decree structure, jurisdictional mapping, 6-2-10 architecture.
+                    </div>
+                    <div class="book-price">$12</div>
+                    <a href="https://www.paypal.com/ncp/payment/KMM7K637J7BWY" class="btn-tier">
+                        Get Manual
+                    </a>
+                </div>
+                <div class="book-card">
+                    <div class="book-title">Prayers for Immigrants</div>
+                    <div class="book-desc">
+                        Divine settlement under the Excellency of God. 
+                        Favor, legal stability, territorial alignment, protection.
+                    </div>
+                    <div class="book-price">$12</div>
+                    <a href="https://www.paypal.com/ncp/payment/F88J9HC7LEMJW" class="btn-tier">
+                        Get Prayers
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<p>
-Experience spiritual alignment under the Excellency of God and the Final Authority.
-</p>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="doctrine-footer">THE EXCELLENCY OF GOD</div>
+            <p><strong>Final Authority</strong></p>
+            <p style="margin-top: 20px; font-size: 0.9rem;">
+                Frequency Nation: Global prayer altar burning at 6AM, 2PM, 10PM WAT
+            </p>
+        </div>
+    </footer>
 
-<a href="https://the-frequency-live.kit.com/" class="button">
-Get Free 7 Days Authority Prayers
-</a>
-
-</div>
-
-<div class="section">
-
-<h2>Official Prayer Resources</h2>
-
-<div class="book">
-<h3>Authority Prayer Manual</h3>
-<p>Establish spiritual dominion and authority.</p>
-<a href="https://www.paypal.com/ncp/payment/KMM7K637J7BWY" class="button">
-Access Manual
-</a>
-</div>
-
-<div class="book">
-<h3>Prayers for Immigrants</h3>
-<p>Prayer support for settlement and favor.</p>
-<a href="https://www.paypal.com/ncp/payment/F88J9HC7LEMJW" class="button">
-Access Prayers
-</a>
-</div>
-
-</div>
-
-<div class="section">
-
-<h2>Subscription Plans</h2>
-
-<div class="subscription">
-<h3>Pillar Monthly</h3>
-<a href="https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-97441926N2003480MNGGLVLA" class="button">
-Subscribe
-</a>
-</div>
-
-<div class="subscription">
-<h3>Ambassador Monthly</h3>
-<a href="https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-5U022920RB021803SNGGLUAY" class="button">
-Subscribe
-</a>
-</div>
-
-<div class="subscription">
-<h3>Watchman Monthly</h3>
-<a href="https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-57B45923YX221973PNGGLSMI" class="button">
-Subscribe
-</a>
-</div>
-
-</div>
-
-<div class="section">
-
-<h2>Support The Mission</h2>
-
-<p>Your support expands global prayer access.</p>
-
-<a href="https://www.paypal.com/paypalme/FrequencyNation" class="button">
-Donate via PayPal
-</a>
-
-<br><br>
-
-<a href="https://buymeacoffee.com/thefequencylive" class="button">
-Buy Me a Coffee
-</a>
-
-<br><br>
-
-<a href="https://ko-fi.com/thefrequencylive" class="button">
-Support via Ko-fi
-</a>
-
-<br><br>
-
-<a href="https://docs.google.com/forms/d/1PaM881bo8m4J9TwoFbK8G07F6SEHbRm-1qp2XqGNMQ4/edit?pli=1" class="button">
-Submit Prayer Request
-</a>
-
-</div>
-
-<div class="footer">
-
-<p>The Frequency Live</p>
-<p>The Excellency of God</p>
-<p>Final Authority</p>
-
-<div class="social">
-<a href="https://www.youtube.com/@TheFrequencyLive">YouTube</a>
-<a href="https://www.tiktok.com/@thefrequencylive1">TikTok</a>
-<a href="https://www.facebook.com/share/169PrmiGRo/">Facebook</a>
-<a href="https://x.com/TheFreqHQlive">X</a>
-<a href="https://www.instagram.com/thefrequencylive1">Instagram</a>
-<a href="https://the-frequency-live.kit.com/">Kit</a>
-</div>
-
-</div>
+    <!-- Next Watch Countdown Script -->
+    <script>
+        function updateNextWatch() {
+            const now = new Date();
+            const hours = now.getUTCHours() + 1; // WAT is UTC+1
+            const watches = [6, 14, 22]; // 6AM, 2PM, 10PM
+            let nextWatch = watches.find(w => w > hours) || watches[0];
+            let nextDay = nextWatch <= hours ? "tomorrow" : "today";
+            const displayHour = nextWatch % 12 || 12;
+            const ampm = nextWatch >= 12 ? 'PM' : 'AM';
+            document.getElementById('next-watch').textContent = 
+                `${displayHour}:00 ${ampm} WAT ${nextDay}`;
+        }
+        updateNextWatch();
+        setInterval(updateNextWatch, 60000);
+    </script>
 
 </body>
 </html>
