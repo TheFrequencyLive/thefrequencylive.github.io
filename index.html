@@ -24,11 +24,22 @@
             padding: 0 20px;
         }
         
+        /* Logo */
+        .logo-container {
+            margin-bottom: 30px;
+        }
+        
+        .logo {
+            max-width: 120px;
+            height: auto;
+            filter: brightness(0) invert(1);
+        }
+        
         /* Header */
         header {
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
             color: white;
-            padding: 60px 0;
+            padding: 40px 0 60px;
             text-align: center;
         }
         
@@ -323,6 +334,7 @@
         @media (max-width: 768px) {
             h1 { font-size: 2rem; }
             h2 { font-size: 1.8rem; }
+            .logo { max-width: 80px; }
             .tier-card.featured { transform: none; }
         }
     </style>
@@ -332,6 +344,9 @@
     <!-- Header / Hero -->
     <header>
         <div class="container">
+            <div class="logo-container">
+                <img src="Freq.PNG" alt="Frequency Nation Logo" class="logo">
+            </div>
             <div class="doctrine">The Excellency of God</div>
             <h1>Frequency Nation</h1>
             <div class="slogan">Final Authority</div>
@@ -357,7 +372,7 @@
             <div class="live-badge">● LIVE BROADCAST</div>
             <div class="video-container">
                 <iframe 
-                    src="https://www.youtube.com/embed/live_stream?channel=UCxxxxxxxxxxxxxxxxxxx" 
+                    src="https://www.youtube.com/embed/live_stream?channel=UCQrSG7WE4zi7UMYsiFhNV9A" 
                     frameborder="0" 
                     allowfullscreen>
                 </iframe>
