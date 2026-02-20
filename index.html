@@ -32,6 +32,7 @@
         .logo {
             max-width: 120px;
             height: auto;
+            filter: brightness(0) invert(1);
         }
         
         /* Header */
@@ -261,10 +262,97 @@
             background: #e94560;
         }
         
+        .alt-platforms {
+            margin-top: 15px;
+            font-size: 0.85rem;
+            color: #888;
+        }
+        
+        .alt-platforms a {
+            color: #e94560;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+        
+        .alt-platforms a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Flexible Support Box */
+        .flexible-box {
+            margin-top: 50px;
+            padding: 40px;
+            background: #1a1a2e;
+            border-radius: 10px;
+            color: white;
+        }
+        
+        .flexible-box h3 {
+            color: #e94560;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        
+        .flexible-box p {
+            margin-bottom: 25px;
+            color: #a0a0a0;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .flexible-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn-flex {
+            display: inline-block;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-flex-paypal {
+            background: #e94560;
+            color: white;
+        }
+        
+        .btn-flex-paypal:hover {
+            background: #c73e54;
+            transform: translateY(-2px);
+        }
+        
+        .btn-flex-bmc {
+            background: transparent;
+            color: #e94560;
+            border: 2px solid #e94560;
+        }
+        
+        .btn-flex-bmc:hover {
+            background: #e94560;
+            color: white;
+        }
+        
+        .btn-flex-kofi {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .btn-flex-kofi:hover {
+            background: white;
+            color: #1a1a2e;
+        }
+        
         /* Email Section */
         .email-section {
             padding: 80px 0;
-            background: #1a1a2e;
+            background: #16213e;
             color: white;
             text-align: center;
         }
@@ -335,6 +423,7 @@
             h2 { font-size: 1.8rem; }
             .logo { max-width: 80px; }
             .tier-card.featured { transform: none; }
+            .flexible-buttons { flex-direction: column; align-items: center; }
         }
     </style>
 </head>
@@ -417,40 +506,72 @@
         <div class="container">
             <h2>Stand in Frequency Nation</h2>
             <p class="section-subtitle">
-                Choose your level of commitment. Every stand sustains the global burn.
+                Choose your governmental assignment. Every stand transmits authority.
             </p>
             <div class="tiers-grid">
                 <div class="tier-card">
                     <div class="tier-name">Watchman</div>
                     <div class="tier-price">$19<span>/month</span></div>
                     <div class="tier-desc">
-                        Sustain the 6-2-10 burn. Full live access. Monthly impact reports. 
-                        Authority Prayer Manual included.
+                        Guard the Frequency. Enforce intercession. Exercise Final Authority 
+                        through daily transmission and alert.
                     </div>
                     <a href="https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-57B45923YX221973PNGGLSMI" class="btn-tier">
                         Join Watchman
                     </a>
+                    <div class="alt-platforms">
+                        Also on: <a href="https://ko-fi.com/thefrequencylive">Ko-fi</a> | 
+                        <a href="https://buymeacoffee.com/thefequencylive">Buy Me a Coffee</a>
+                    </div>
                 </div>
                 <div class="tier-card featured">
                     <div class="tier-name">Ambassador</div>
                     <div class="tier-price">$50<span>/month</span></div>
                     <div class="tier-desc">
-                        Multiply the Frequency into your territory. Lighthouse launch kit. 
-                        Quarterly briefings. Mentor new citizens.
+                        Represent heaven's will. Carry authority into your territory. 
+                        Command outcomes as delegated envoy of Final Authority.
                     </div>
                     <a href="https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-5U022920RB021803SNGGLUAY" class="btn-tier">
                         Become Ambassador
                     </a>
+                    <div class="alt-platforms">
+                        Also on: <a href="https://ko-fi.com/thefrequencylive">Ko-fi</a> | 
+                        <a href="https://buymeacoffee.com/thefequencylive">Buy Me a Coffee</a>
+                    </div>
                 </div>
                 <div class="tier-card">
                     <div class="tier-name">Pillar</div>
                     <div class="tier-price">$100<span>/month</span></div>
                     <div class="tier-desc">
-                        Foundational support for global expansion. Exclusive strategy sessions. 
-                        Founding recognition in Frequency Nation.
+                        Uphold the doctrine of Excellency. Sustain global transmission. 
+                        Operate as foundational government for Frequency Nation.
                     </div>
                     <a href="https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-97441926N2003480MNGGLVLA" class="btn-tier">
                         Stand as Pillar
+                    </a>
+                    <div class="alt-platforms">
+                        Also on: <a href="https://ko-fi.com/thefrequencylive">Ko-fi</a> | 
+                        <a href="https://buymeacoffee.com/thefequencylive">Buy Me a Coffee</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Flexible Support Box -->
+            <div class="flexible-box">
+                <h3>Transmit Freely</h3>
+                <p>
+                    Not ready for monthly assignment? Give any amount. Fuel the Frequency. 
+                    Every transmission advances the authority—no tier required.
+                </p>
+                <div class="flexible-buttons">
+                    <a href="https://www.paypal.com/paypalme/FrequencyNation" class="btn-flex btn-flex-paypal">
+                        Give Any Amount (PayPal)
+                    </a>
+                    <a href="https://buymeacoffee.com/thefequencylive" class="btn-flex btn-flex-bmc">
+                        Buy Me a Coffee ($5)
+                    </a>
+                    <a href="https://ko-fi.com/thefrequencylive" class="btn-flex btn-flex-kofi">
+                        Ko-fi Support
                     </a>
                 </div>
             </div>
